@@ -14,6 +14,6 @@ router.post("/login", Controller.LoginController);
 router.post("/signup", Controller.SignupController);
 
 // logout
-router.get("/logout", Controller.LogoutController);
+router.post("/logout", Controller.LogoutController);
 
 export default router;
