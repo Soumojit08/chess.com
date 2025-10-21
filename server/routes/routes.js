@@ -8,7 +8,7 @@ router.get("/health", (req, res) => {
 });
 
 // login
-router.get("/login", Controller.LoginController);
+router.post("/login", Controller.LoginController);
 
 // signup
 router.post("/signup", Controller.SignupController);
