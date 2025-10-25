@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav>
-      <div className="logo">Chess.com</div>
+    <nav className="bg-primary-foreground text-foreground ">
+      <div className="logo">Chess Master</div>
 
       <div className="menu">
         <ul>
