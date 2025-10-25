@@ -4,12 +4,12 @@ import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <>
-    <Navbar />
+    <div className="h-screen w-full bg-background text-foreground">
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-    </>
+    </div>
   );
 };
 

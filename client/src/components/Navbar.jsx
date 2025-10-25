@@ -2,13 +2,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav className="bg-primary-foreground text-foreground ">
-      <div className="logo">Chess Master</div>
+    <nav className="h-full w-1/4 bg-primary-foreground text-foreground flex flex-col items-start">
+      <div className="logo flex ">Chess Master</div>
 
-      <div className="menu">
+      <div className="menu flex flex-col">
         <ul>
           <li>
-            <Link to="/play">play</Link>
+            <Link to="/play">Play</Link>
           </li>
           <li>
             <Link to="/watch">Watch</Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="actions">
+      <div className="actions flex flex-col">
         <button>Login</button>
         <button>Signup</button>
         <button className="Toggle">Dark Mode</button>
