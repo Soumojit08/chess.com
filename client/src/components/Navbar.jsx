@@ -19,7 +19,11 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="user"></div>
+      <div className="actions">
+        <button>Login</button>
+        <button>Signup</button>
+        <button className="Toggle">Dark Mode</button>
+      </div>
     </nav>
   );
 };
