@@ -1,10 +1,6 @@
 
 const Home = () => {
-  return (
-    <div className="h-screen w-full bg-background text-foreground ">
-      
-    </div>
-  )
+  return <div></div>;
 }
 
 export default Home
