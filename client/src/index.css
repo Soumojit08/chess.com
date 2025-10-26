@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+@theme light{
   --background: #ffffff;
   --foreground: #09090b;
   --card: #fdfdfd;
@@ -55,7 +55,7 @@
   --spacing: 0.25rem;
 }
 
-.dark {
+@theme dark {
   --background: #000000;
   --foreground: #fafafa;
   --card: #040404;
