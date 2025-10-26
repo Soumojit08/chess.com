@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sue+Ellen+Francisco&display=swap');
 @import "tailwindcss";
 
 @theme light{
@@ -170,4 +171,15 @@
 
 body {
   letter-spacing: var(--tracking-normal);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
+
+  .heading {
+  font-family: "Sue Ellen Francisco", cursive !important;
+  font-weight: 700;
+  font-style: normal;
+  
+  }
