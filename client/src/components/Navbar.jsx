@@ -5,9 +5,9 @@ const Navbar = () => {
   return (
     <nav className="h-full w-1/7 bg-primary-foreground text-foreground flex flex-col items-start py-12 px-6 gap-10">
       <div className="logo flex ">
-        <h1 className="tracking-widest font-extrabold text-2xl heading">
+        <h1 className="tracking-widest font-extrabold text-3xl heading flex items-end justify-end " >
           <span>
-            <FaChessPawn />
+            <FaChessPawn size={36}/>
           </span>
           ChessMaster
         </h1>
