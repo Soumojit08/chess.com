@@ -1,11 +1,16 @@
 import { Link } from "react-router-dom";
-import {Chess} from "lucide-react"
+import { FaChessPawn } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <nav className="h-full w-1/7 bg-primary-foreground text-foreground flex flex-col items-start py-12 px-6 gap-10">
       <div className="logo flex ">
-        <h1 className="tracking-widest font-extrabold text-2xl heading">ChessMaster</h1>
+        <h1 className="tracking-widest font-extrabold text-2xl heading">
+          <span>
+            <FaChessPawn />
+          </span>
+          ChessMaster
+        </h1>
       </div>
 
       <div className="menu flex flex-col">
