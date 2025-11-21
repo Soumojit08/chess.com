@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import { FaChessPawn } from "react-icons/fa";
 
+import { Button } from "@/components/ui/button";
+
 const Navbar = () => {
   return (
     <nav className="h-full w-1/7 bg-primary-foreground text-foreground flex flex-col items-start py-12 px-6 gap-10">
       <div className="logo flex ">
-        <h1 className="tracking-widest font-extrabold text-3xl heading flex items-end justify-end " >
+        <h1 className="tracking-widest font-extrabold text-3xl heading flex items-end justify-end ">
           <span>
-            <FaChessPawn size={36}/>
+            <FaChessPawn size={36} />
           </span>
           ChessMaster
         </h1>
@@ -27,10 +29,12 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <div className="actions flex flex-col">
-        <button>Login</button>
-        <button>Signup</button>
-        <button className="Toggle">Dark Mode</button>
+      <div className="actions flex flex-col gap-2">
+        <Button variant="outline">Login</Button>
+        <Button>Signup</Button>
+        <Button variant="secondary" className="Toggle">
+          Dark Mode
+        </Button>
       </div>
     </nav>
   );
