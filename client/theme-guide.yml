@@ -1,0 +1,50 @@
+project: "Multiplayer Chess - Luxury Edition"
+inspiration: "Circle to Square (Monochromatic Minimalist)"
+tech_stack: ["React", "Tailwind CSS v4", "Shadcn UI"]
+
+# -----------------------------------------------------------------------------
+# 1. TYPOGRAPHY & VIBE
+# -----------------------------------------------------------------------------
+typography:
+  primary_font: "Inter (or Jost for that geometric look)"
+  data_font: "JetBrains Mono (Keep for timers, but thin weight)"
+
+  headings:
+    style: "uppercase tracking-widest font-light" # The "THE DETAILS" look
+    size_hero: "text-5xl md:text-7xl"
+    size_section: "text-xl md:text-2xl"
+
+  buttons:
+    style: "uppercase tracking-wide text-xs font-semibold border rounded-none"
+    primary: "bg-white text-black hover:bg-gray-200" # "I WANT ONE" style
+    secondary: "bg-transparent border-white text-white hover:bg-white hover:text-black"
+
+# -----------------------------------------------------------------------------
+# 2. COLOR PALETTE (Strict Monochromatic)
+# -----------------------------------------------------------------------------
+colors:
+  background:
+    page: "#050505" # Obsidian (Almost Pure Black)
+    card: "#121212" # Charcoal (Subtle contrast)
+    board_dark: "#121212" # Dark Squares
+    board_light: "#E5E5E5" # Platinum (Light Squares - not pure white)
+
+  foreground:
+    text_primary: "#FFFFFF" # Pure White
+    text_muted: "#A1A1AA" # Silver (for body text)
+
+  accents:
+    highlight: "#FFFFFF" # Selected piece (High contrast)
+    danger: "#AA2222" # Deep Crimson (Only strictly needed for errors)
+
+# -----------------------------------------------------------------------------
+# 3. SPACING & LAYOUT (The "Museum" Feel)
+# -----------------------------------------------------------------------------
+layout:
+  spacing:
+    section_gap: "py-24" # Massive space between sections
+    grid_gap: "gap-12" # Air between cards
+
+  borders:
+    radius: "rounded-sm" # Very slight rounding, almost sharp
+    width: "border" # Thin 1px lines

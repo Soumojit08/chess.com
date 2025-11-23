@@ -1,194 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sue+Ellen+Francisco&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap');
 @import "tailwindcss";
 
-@theme light{
-  --background: #ffffff;
-  --foreground: #09090b;
-  --card: #fdfdfd;
-  --card-foreground: #09090b;
-  --popover: #ffffff;
-  --popover-foreground: #09090b;
-  --primary: #22c55e;
-  --primary-foreground: #f9faf8;
-  --secondary: #f4f4f5;
-  --secondary-foreground: #09090b;
-  --muted: #f4f4f5;
-  --muted-foreground: #71717a;
-  --accent: #fafafa;
-  --accent-foreground: #09090b;
-  --destructive: #ef4444;
-  --destructive-foreground: #f9faf8;
-  --border: #e4e4e7;
-  --input: #e4e4e7;
-  --ring: #22c55e;
-  --chart-1: #22c55e;
-  --chart-2: #16a34a;
-  --chart-3: #15803d;
-  --chart-4: #166534;
-  --chart-5: #14532d;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #09090b;
-  --sidebar-primary: #22c55e;
-  --sidebar-primary-foreground: #f9faf8;
-  --sidebar-accent: #f4f4f5;
-  --sidebar-accent-foreground: #09090b;
-  --sidebar-border: #e4e4e7;
-  --sidebar-ring: #22c55e;
-  --font-sans: Inter;
-  --font-serif: Lora;
-  --font-mono: Fira Code;
-  --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 1px;
-  --shadow-blur: 4px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0.05;
-  --shadow-color: #000000;
-  --shadow-2xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.03);
-  --shadow-xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.03);
-  --shadow-sm: 0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
-  --shadow: 0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 1px 2px -1px hsl(0 0% 0% / 0.05);
-  --shadow-md: 0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 2px 4px -1px hsl(0 0% 0% / 0.05);
-  --shadow-lg: 0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 4px 6px -1px hsl(0 0% 0% / 0.05);
-  --shadow-xl: 0px 1px 4px 0px hsl(0 0% 0% / 0.05), 0px 8px 10px -1px hsl(0 0% 0% / 0.05);
-  --shadow-2xl: 0px 1px 4px 0px hsl(0 0% 0% / 0.13);
-  --tracking-normal: normal;
-  --spacing: 0.25rem;
-}
+/* 1. DEFINE THE LUXURY THEME VARIABLES */
+@theme {
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
 
-@theme dark {
-  --background: #000000;
-  --foreground: #fafafa;
-  --card: #040404;
-  --card-foreground: #fafafa;
-  --popover: #000000;
-  --popover-foreground: #fafafa;
-  --primary: #22c55e;
-  --primary-foreground: #0a0a0a;
-  --secondary: #18181b;
-  --secondary-foreground: #fafafa;
-  --muted: #18181b;
-  --muted-foreground: #a1a1aa;
-  --accent: #09090b;
-  --accent-foreground: #fafafa;
-  --destructive: #7f1d1d;
-  --destructive-foreground: #f8fafc;
-  --border: #27272a;
-  --input: #27272a;
-  --ring: #22c55e;
-  --chart-1: #22c55e;
-  --chart-2: #4ade80;
-  --chart-3: #86efac;
-  --chart-4: #bbf7d0;
-  --chart-5: #dcfce7;
-  --sidebar: #000000;
-  --sidebar-foreground: #fafafa;
-  --sidebar-primary: #22c55e;
-  --sidebar-primary-foreground: #0a0a0a;
-  --sidebar-accent: #18181b;
-  --sidebar-accent-foreground: #fafafa;
-  --sidebar-border: #27272a;
-  --sidebar-ring: #22c55e;
-  --font-sans: Inter;
-  --font-serif: Lora;
-  --font-mono: Fira Code;
-  --radius: 0.5rem;
-  --shadow-x: 0px;
-  --shadow-y: 1px;
-  --shadow-blur: 4px;
-  --shadow-spread: 0px;
-  --shadow-opacity: 0.2;
-  --shadow-color: #000000;
-  --shadow-2xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.10);
-  --shadow-xs: 0px 1px 4px 0px hsl(0 0% 0% / 0.10);
-  --shadow-sm: 0px 1px 4px 0px hsl(0 0% 0% / 0.20), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
-  --shadow: 0px 1px 4px 0px hsl(0 0% 0% / 0.20), 0px 1px 2px -1px hsl(0 0% 0% / 0.20);
-  --shadow-md: 0px 1px 4px 0px hsl(0 0% 0% / 0.20), 0px 2px 4px -1px hsl(0 0% 0% / 0.20);
-  --shadow-lg: 0px 1px 4px 0px hsl(0 0% 0% / 0.20), 0px 4px 6px -1px hsl(0 0% 0% / 0.20);
-  --shadow-xl: 0px 1px 4px 0px hsl(0 0% 0% / 0.20), 0px 8px 10px -1px hsl(0 0% 0% / 0.20);
-  --shadow-2xl: 0px 1px 4px 0px hsl(0 0% 0% / 0.50);
-}
+  /* Custom Color Palette - Monochromatic */
+  --color-obsidian: #050505;      /* Main Page BG */
+  --color-charcoal: #121212;      /* Secondary BG */
+  --color-platinum: #E5E5E5;      /* Light Squares / Borders */
+  --color-silver: #A1A1AA;        /* Muted Text */
+  --color-pure-white: #FFFFFF;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
+  /* Layout Spacing for that "Airy" feel */
+  --spacing-section: 6rem;        /* 96px gap between sections */
+  
+  /* Shadcn Overrides mapped to Theme */
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
 
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-serif: var(--font-serif);
-
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-
-  --shadow-2xs: var(--shadow-2xs);
-  --shadow-xs: var(--shadow-xs);
-  --shadow-sm: var(--shadow-sm);
-  --shadow: var(--shadow);
-  --shadow-md: var(--shadow-md);
-  --shadow-lg: var(--shadow-lg);
-  --shadow-xl: var(--shadow-xl);
-  --shadow-2xl: var(--shadow-2xl);
-
-  --tracking-tighter: calc(var(--tracking-normal) - 0.05em);
-  --tracking-tight: calc(var(--tracking-normal) - 0.025em);
-  --tracking-normal: var(--tracking-normal);
-  --tracking-wide: calc(var(--tracking-normal) + 0.025em);
-  --tracking-wider: calc(var(--tracking-normal) + 0.05em);
-  --tracking-widest: calc(var(--tracking-normal) + 0.1em);
+  --radius: 0.125rem; /* 2px - Almost sharp corners */
 }
 
-body {
-  letter-spacing: var(--tracking-normal);
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-}
-
-  .heading {
-  font-family: "Sue Ellen Francisco", cursive !important;
-  font-weight: 700;
-  font-style: normal;
-  
-  }
-  
+/* 2. SET THE BASE STYLES (The Dark "Museum" Vibe) */
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+  :root {
+    /* Background is Deep Black */
+    --background: #050505; 
+    --foreground: #FFFFFF;
+
+    /* Cards are slightly lighter black */
+    --card: #121212;
+    --card-foreground: #FFFFFF;
+
+    --popover: #050505;
+    --popover-foreground: #FFFFFF;
+
+    /* PRIMARY ACTION (The "I WANT ONE" Button) */
+    /* In this theme, Primary is WHITE, text is BLACK */
+    --primary: #FFFFFF;
+    --primary-foreground: #000000;
+
+    /* SECONDARY ACTION (Ghost Buttons) */
+    --secondary: #121212;
+    --secondary-foreground: #FFFFFF;
+
+    /* MUTED TEXT */
+    --muted: #121212;
+    --muted-foreground: #A1A1AA; /* Silver */
+
+    /* ACCENTS */
+    --accent: #262626;
+    --accent-foreground: #FFFFFF;
+
+    --destructive: #991B1B;
+    --destructive-foreground: #FFFFFF;
+
+    /* BORDERS - Very subtle grey */
+    --border: #262626;
+    --input: #262626;
+    --ring: #FFFFFF; /* Focus ring is white */
+
+    --radius: 0.125rem;
   }
+
+  * {
+    @apply border-border;
+  }
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    /* Optional: Add a subtle noise texture if you want that premium feel */
+  }
+
+  /* 3. TYPOGRAPHY UTILITIES FOR THIS THEME */
+  /* Use class="type-h1" for main headers like "CIRCLE TO SQUARE" */
+  .type-h1 {
+    @apply font-sans text-4xl md:text-6xl font-light uppercase tracking-[0.2em] text-white;
+  }
+
+  /* Use class="type-h2" for section headers like "THE PIECES" */
+  .type-h2 {
+    @apply font-sans text-lg md:text-xl font-normal uppercase tracking-[0.3em] text-silver mb-8;
+  }
+  
+  /* Use class="type-body" for description text */
+  .type-body {
+    @apply font-sans text-sm leading-loose text-silver;
   }
 }
