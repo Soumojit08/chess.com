@@ -5,26 +5,28 @@ const Navbar = () => {
   const items = [
     {
       label: "About",
-      bgColor: "#0D0716",
-      textColor: "#fff",
+      bgColor: "#E5E5E5",
+      textColor: "#121212",
       links: [
-        { label: "Company", ariaLabel: "About Company" },
-        { label: "Careers", ariaLabel: "About Careers" },
+        { label: "The Philosophy", href: "/philosophy" },
+        { label: "Grandmasters", href: "/grandmasters" },
+        { label: "Engine Architecture", href: "/engine" },
       ],
     },
     {
-      label: "Projects",
-      bgColor: "#170D27",
-      textColor: "#fff",
+      label: "Tournaments",
+      bgColor: "#E5E5E5",
+      textColor: "#121212",
       links: [
-        { label: "Featured", ariaLabel: "Featured Projects" },
-        { label: "Case Studies", ariaLabel: "Project Case Studies" },
+        { label: "Live Matches", href: "/live" },
+        { label: "Global Rankings", href: "/rankings" },
+        { label: "Archives", href: "/archives" },
       ],
     },
     {
       label: "Contact",
-      bgColor: "#271E37",
-      textColor: "#fff",
+      bgColor: "#E5E5E5",
+      textColor: "#121212",
       links: [
         { label: "Email", ariaLabel: "Email us" },
         { label: "Twitter", ariaLabel: "Twitter" },

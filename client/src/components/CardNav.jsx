@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 // use your own icon import if react-icons is not available
 import { GoArrowUpRight } from "react-icons/go";
+import { Button } from "./ui/button";
 
 const CardNav = ({
   logo,
@@ -172,12 +173,15 @@ const CardNav = ({
             <img src={logo} alt={logoAlt} className="logo invert h-[36px]" />
           </div>
 
-          <button
+          {/* <button
             type="button"
             className="card-nav-cta-button hidden md:inline-flex rounded-[calc(0.75rem-0.2rem)] px-4 items-center h-full font-medium cursor-pointer transition-colors duration-300 hover:text-black hover:bg-primary border-2 border-primary"
           >
             Get Started
-          </button>
+          </button> */}
+          <Button variant="outline" size="default" className="cursor-pointer " >
+            Get Started
+          </Button>
         </div>
 
         <div
