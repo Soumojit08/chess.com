@@ -12,7 +12,7 @@
   --color-charcoal: #121212;      /* Secondary BG */
   --color-platinum: #E5E5E5;      /* Light Squares / Borders */
   --color-silver: #A1A1AA;        /* Muted Text */
-  --color-pure-white: #FFFFFF;
+  --color-white: #FFFFFF;
 
   /* Layout Spacing for that "Airy" feel */
   --spacing-section: 6rem;        /* 96px gap between sections */
