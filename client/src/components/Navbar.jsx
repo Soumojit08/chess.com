@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import Logo from "./ui/Logo";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
 
       {/* Full Screen Overlay Menu */}
       <div
-        className={`fixed inset-0 z-50 bg-obsidian flex flex-col justify-center items-start transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] ${
+        className={`fixed inset-0 z-50 bg-obsidian flex justify-between items-center px-10 transition-transform duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -54,13 +55,38 @@ const Navbar = () => {
               key={link.name}
               to={link.path}
               onClick={toggleMenu}
-              className="group relative overflow-hidden"
+              className="group relative flex items-center gap-4 overflow-hidden"
             >
+              <div className="h-8 w-8 bg-muted-foreground"></div>
               <span className="uppercase text-9xl font-mono font-bold tracking-tighter text-muted-foreground transition-colors duration-500 group-hover:text-white">
                 {link.name}
               </span>
             </Link>
           ))}
+        </div>
+
+        <div className="flex flex-col space-y-4 text-right uppercase text-silver">
+          <Link
+            to="/instagram"
+            onClick={toggleMenu}
+            className=" hover:text-white transition-colors duration-300"
+          >
+            <FaInstagram size={28} />
+          </Link>
+          <Link
+            to="/github"
+            onClick={toggleMenu}
+            className=" hover:text-white transition-colors duration-300"
+          >
+            <FaGithub size={28} />
+          </Link>
+          <Link
+            to="/linkedin"
+            onClick={toggleMenu}
+            className=" hover:text-white transition-colors duration-300"
+          >
+            <FaLinkedin size={28} />
+          </Link>
         </div>
       </div>
     </>
