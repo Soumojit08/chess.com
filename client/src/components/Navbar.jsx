@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Menu, X, ArrowRightIcon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import Logo from "./ui/Logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
     <>
       {/* Top Navbar (Visible always) */}
       <nav className="fixed top-0 left-0 w-full z-40 px-6 py-4 flex justify-between items-center bg-transparent mix-blend-difference text-white">
-        <h1 className="uppercase text-2xl font-mono">ROOK</h1>
+        <Logo />
 
         {/* Menu Trigger Button */}
         <button
