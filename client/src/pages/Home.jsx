@@ -1,6 +1,9 @@
+import CanvasElem from "../components/CanvasElem";
 
 const Home = () => {
-  return <div></div>;
+  return <div>
+    <CanvasElem />
+  </div>;
 }
 
 export default Home
