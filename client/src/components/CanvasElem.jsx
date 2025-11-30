@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { useGLTF, Stage, PresentationControls } from "@react-three/drei";
+import { useGLTF, Stage } from "@react-three/drei";
 
 function Model(props) {
   const { scene } = useGLTF("/chess.glb");
@@ -14,16 +14,10 @@ const CanvasElem = () => {
       camera={{ fov: 45 }}
       style={{ position: "absolute" }}
     >
-      <PresentationControls
-        rotation={[0,0,0]}
-        damping={0.2}
-        // speed={1.5}
-        // global
-      >
-        <Stage environment={null}>
-          <Model />
-        </Stage>
-      </PresentationControls>
+      <Stage environment={null} shadows={"accumulative"} adjustCamera={0.6}>
+        {/* Rotation is [x, y, z] in radians. Math.PI / 4 is 45 degrees. */}
+        <Model rotation={[0, -Math.PI / 4, 0]} />
+      </Stage>
     </Canvas>
   );
 };
