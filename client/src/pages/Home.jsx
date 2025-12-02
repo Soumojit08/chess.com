@@ -6,7 +6,7 @@ const Home = () => {
     console.log("clicked");
   };
   return (
-    <div className="min-h-screen bg-obsidian text-white position-relative ">
+    <div className="h-screen bg-obsidian text-white position-relative ">
       <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20">
         <h1 className="text-4xl font-bold font-sans uppercase">
           Circle to Square
