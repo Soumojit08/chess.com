@@ -57,8 +57,8 @@ const Navbar = () => {
               onClick={toggleMenu}
               className="group relative flex items-center gap-4 overflow-hidden"
             >
-              <div className="h-8 w-8 bg-muted-foreground"></div>
-              <span className="uppercase text-9xl font-mono font-bold tracking-tighter text-muted-foreground transition-colors duration-500 group-hover:text-white">
+              <div className="h-4 w-4 bg-muted-foreground md:h-8 md:w-8 lg:h-8 lg:w-8"></div>
+              <span className="uppercase text-5xl font-mono font-bold tracking-tighter text-muted-foreground transition-colors duration-500 group-hover:text-white md:text-9xl lg:text-9xl">
                 {link.name}
               </span>
             </Link>
