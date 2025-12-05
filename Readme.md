@@ -2,18 +2,21 @@
 
 A real-time online chess game inspired by **chess.com**, built with the **MERN stack** — featuring WebSocket-based gameplay, move validation with `chess.js`, and a modern React UI using `react-chessboard`.
 
----
+#### 🚀 Tech Stack
 
-## 🚀 Tech Stack
-
-| Layer                  | Technology                                                         |
-| ---------------------- | ------------------------------------------------------------------ |
-| **Frontend**           | React, Vite (or CRA), react-chessboard, socket.io-client, chess.js |
-| **Backend**            | Node.js, Express, Socket.IO, MongoDB (Mongoose)                    |
-| **Database**           | MongoDB Atlas (or local MongoDB)                                   |
-| **Auth (Later)**       | JWT authentication                                                 |
-| **Real-time Engine**   | Socket.IO                                                          |
-| **Deployment (Later)** | Vercel + Render/Heroku + MongoDB Atlas                             |
+| Domain | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | React + Vite | Fast, modern UI framework |react-chessboard | socket.io-client | chess.js
+| **Styling** | **Tailwind CSS + Shadcn UI** | Industry-standard, accessible UI components |
+| **State** | **Zustand** + **TanStack Query** | Efficient global state & server-state management |
+| **Backend** | Node.js + Express | Scalable REST API & WebSocket handling |
+| **Realtime** | Socket.IO | Real-time bi-directional events (Moves, Chat) |
+| **Validation** | **Zod** | Type-safe schema validation (Frontend & Backend) |
+| **Database** | **PostgreSQL** + **Drizzle ORM** | Relational data integrity & modern TypeScript ORM |
+| **Caching** | **Redis** | Session management & game state caching |
+| **Auth** | **Clerk** (or Better Auth) | Secure, battle-tested user authentication |
+| **DevOps** | **Docker** + **Coolify** | Containerization & self-hosted PaaS deployment |
+| **Testing** | **Vitest** + **Playwright** | Unit & End-to-End testing |
 
 ---
 
