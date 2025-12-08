@@ -13,7 +13,6 @@ const Preloader = ({ onComplete }) => {
       },
     });
 
-    // Animate the counter from 0 to 100
     const counterObj = { value: 0 };
 
     tl.to(counterObj, {
@@ -32,7 +31,6 @@ const Preloader = ({ onComplete }) => {
       delay: 0.2,
     });
 
-    // Slide the entire preloader up
     tl.to(containerRef.current, {
       y: "-100%",
       duration: 1,

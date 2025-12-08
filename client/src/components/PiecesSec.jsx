@@ -6,7 +6,7 @@ const pieces = [
     description:
       "The King is the most important piece in the game of chess. If the King is trapped, the game is over.",
     image: null,
-  }, // Placeholder for image
+  },
   {
     name: "QUEEN",
     description:
