@@ -4,7 +4,7 @@ const InformationSec = () => {
   return (
     <section className="w-full min-h-[60vh] flex flex-col lg:flex-row items-center justify-between  bg-obsidian text-white ">
       {/* Left: Image */}
-      <div className="w-1/2 flex">
+      <div className="w-full lg:w-1/2 flex">
         <div className="relative w-full overflow-hidden">
           <img
             src={chessPiece}
@@ -15,7 +15,7 @@ const InformationSec = () => {
       </div>
 
       {/* Right: Content */}
-      <div className="w-1/2 flex flex-col justify-center px-20">
+      <div className="w-full lg:w-1/2 flex flex-col justify-center px-6 lg:px-20 py-12 lg:py-0">
         <div className="flex flex-col">
           <h2 className="text-3xl mb-4 font-mono text-white">
             SIMPLE. ELEGANT. EXCLUSIVE.
