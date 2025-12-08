@@ -30,7 +30,7 @@ const InformationSec = () => {
 
           {/* The Details List */}
           <div className="mt-4">
-            <h3 className="text-2xl font-mono tracking-wider mb-4 text-white ">
+            <h3 className="text-2xl font-mono tracking-widest mb-4 text-white">
               THE DETAILS
             </h3>
             <ul className="space-y-2 text-muted-foreground text-sm">
