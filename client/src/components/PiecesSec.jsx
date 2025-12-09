@@ -26,7 +26,7 @@ const pieces = [
   {
     name: "BISHOP",
     description:
-      "The Bishop moves diagonally. Each player starts with two bishops, one on a light square and one on a dark square.",
+      "The Bishop moves diagonally. Each player starts with two bishops, one on a light and one on a dark square.",
     image: null,
     dimensions: {
       title: "DIMENSIONS",
@@ -71,8 +71,8 @@ const pieces = [
 
 const PiecesSec = () => {
   return (
-    <section className="w-full py-24 px-8 md:px-24 bg-white text-black">
-      <h2 className="text-2xl font-mono tracking-widest mb-4 text-black">
+    <section className="w-full py-12 px-8 md:px-24 bg-white text-black">
+      <h2 className="text-2xl font-mono tracking-widest mb-6 text-black">
         THE PIECES
       </h2>
 
@@ -84,7 +84,7 @@ const PiecesSec = () => {
         <div className="pieces mt-8 flex flex-wrap justify-evenly items-center w-full max-w-5xl gap-2 space-y-4 text-white p-12">
           {pieces.map((piece, index) => (
             <div
-              className="w-96 h-80 bg-charcoal p-12 flex flex-col justify-between space-y-2"
+              className="w-96 h-80 bg-charcoal p-12 flex flex-col justify-between space-y-2 cursor-pointer hover:scale-102 transition-all duration-300"
               key={index}
             >
               <h1 className="text-4xl font-mono tracking-widest mb-4">
@@ -95,10 +95,10 @@ const PiecesSec = () => {
                 {piece.dimensions.title}
               </h2>
               <div className="flex gap-4">
-                <p className="text-lg text-platinum">
+                <p className="text-base text-platinum">
                   Height : {piece.dimensions.height}
                 </p>
-                <p className="text-lg text-platinum">
+                <p className="text-base text-platinum">
                   Base : {piece.dimensions.base}
                 </p>
               </div>
