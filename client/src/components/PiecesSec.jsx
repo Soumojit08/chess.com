@@ -59,7 +59,7 @@ const pieces = [
   {
     name: "PAWN",
     description:
-      "The Pawn moves forward one square, but captures diagonally. It has unique moves like en passant and promotion.",
+      "The Pawn moves forward one square, but captures diagonally. It has unique ability to promote",
     image: null,
     dimensions: {
       title: "DIMENSIONS",
@@ -81,10 +81,10 @@ const PiecesSec = () => {
           <img src={piece} className="w-full max-w-5xl object-contain " />
         </div>
 
-        <div className="pieces mt-8 flex flex-wrap justify-evenly items-center w-full max-w-5xl gap-2 space-y-4 text-white p-12">
+        <div className="pieces mt-8 flex flex-wrap justify-evenly items-center w-full max-w-5xl gap-2 text-white p-12">
           {pieces.map((piece, index) => (
             <div
-              className="w-96 h-80 bg-charcoal p-12 flex flex-col justify-between space-y-2 cursor-pointer hover:scale-102 transition-all duration-300"
+              className="w-96 h-80 bg-charcoal p-12 flex flex-col justify-between cursor-pointer hover:scale-102 transition-all duration-300"
               key={index}
             >
               <h1 className="text-4xl font-mono tracking-widest mb-4">
