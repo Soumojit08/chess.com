@@ -5,10 +5,12 @@ import GallerySec from "../components/GallerySec";
 import ContactSec from "../components/ContactSec";
 import Footer from "../components/Footer";
 import allPiece from "../assets/home page.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
   const handleClick = () => {
-    console.log("clicked");
+    navigate("/user");
   };
   return (
     <div className="min-h-screen bg-obsidian text-white flex flex-col">

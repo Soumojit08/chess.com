@@ -1,9 +1,11 @@
 import footer from "../assets/chess footer.jpg";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const ContactSec = () => {
+  const navigate = useNavigate();
   const handleClick = () => {
-    console.log("Contact clicked");
+    navigate("/contact");
   };
   return (
     <section className="w-full pt-0 pb-24 px-8 md:px-24 bg-white text-black border-t border-gray-100">
