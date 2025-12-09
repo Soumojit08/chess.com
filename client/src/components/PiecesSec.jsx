@@ -81,26 +81,30 @@ const PiecesSec = () => {
           <img src={piece} className="w-full max-w-5xl object-contain " />
         </div>
 
-        <div className="pieces mt-8 flex flex-wrap justify-evenly items-center w-full max-w-5xl gap-2 text-white p-12">
+        <div className="pieces mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl px-4 md:px-0">
           {pieces.map((piece, index) => (
             <div
-              className="w-96 h-80 bg-charcoal p-12 flex flex-col justify-between cursor-pointer hover:scale-102 transition-all duration-300"
+              className="w-full h-88 md:h-80 bg-charcoal p-6 md:p-8 lg:p-12 flex flex-col justify-between cursor-pointer hover:scale-105 transition-all duration-300"
               key={index}
             >
-              <h1 className="text-4xl font-mono tracking-widest mb-4">
+              <h1 className="text-3xl md:text-4xl font-mono tracking-widest mb-2 md:mb-4 text-white">
                 {piece.name}
               </h1>
-              <p className="text-base text-platinum">{piece.description}</p>
-              <h2 className="text-xl font-mono tracking-widest mb-4">
-                {piece.dimensions.title}
-              </h2>
-              <div className="flex gap-4">
-                <p className="text-base text-platinum">
-                  Height : {piece.dimensions.height}
-                </p>
-                <p className="text-base text-platinum">
-                  Base : {piece.dimensions.base}
-                </p>
+              <p className="text-sm md:text-base text-platinum line-clamp-3">
+                {piece.description}
+              </p>
+              <div>
+                <h2 className="text-lg md:text-xl font-mono tracking-widest mb-2 md:mb-4 mt-2 text-white">
+                  {piece.dimensions.title}
+                </h2>
+                <div className="flex gap-4">
+                  <p className="text-sm md:text-base text-platinum">
+                    Height : {piece.dimensions.height}
+                  </p>
+                  <p className="text-sm md:text-base text-platinum">
+                    Base : {piece.dimensions.base}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
