@@ -1,4 +1,4 @@
-import React from 'react';
+import MagicBento from "./MagicBento";
 
 const GallerySec = () => {
   return (
@@ -6,6 +6,21 @@ const GallerySec = () => {
       <h2 className="text-2xl font-mono tracking-widest mb-4 text-black">
         THE GALLERY
       </h2>
+
+      <div className="w-full h-auto flex justify-center">
+        <MagicBento
+          textAutoHide={false}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={false}
+          enableTilt={false}
+          enableMagnetism={false}
+          clickEffect={false}
+          spotlightRadius={50}
+          particleCount={8}
+          glowColor="255, 255, 255"
+        />
+      </div>
     </section>
   );
 };
