@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import CanvasElem from "../components/CanvasElem";
 import InformationSec from "../components/InformationSec";
 import PiecesSec from "../components/PiecesSec";
 import GallerySec from "../components/GallerySec";
 import ContactSec from "../components/ContactSec";
 import Footer from "../components/Footer";
+import allPiece from "../assets/home page.jpg";
 
 const Home = () => {
   const handleClick = () => {
@@ -13,28 +13,28 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-obsidian text-white flex flex-col">
       {/* HERO SECTION */}
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="relative h-screen w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
         {/* Content Overlay */}
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-20 pointer-events-none">
-          <h1 className="font-mono uppercase text-center text-2xl">
-            Circle to Square
-          </h1>
-          <p className="font-mono text-silver text-center uppercase md:text-base text-xs tracking-widest mb-2">
+        <div className="relative z-20 flex flex-col items-center text-center px-4 w-full max-w-4xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
+          <p className="font-mono text-silver text-xs md:text-sm tracking-[0.4em] uppercase mt-10 mb-8 drop-shadow-md">
             simple. elegant. beautiful.
           </p>
 
           <Button
-            variant="outline"
-            className="cursor-pointer pointer-events-auto hover:bg-white hover:text-black transition-colors duration-300 uppercase tracking-widest"
+            className="bg-transparent border border-white text-white hover:bg-white cursor-pointer hover:text-black transition-all duration-300 uppercase tracking-[0.15em] px-10 py-6 text-sm md:text-base rounded-none backdrop-blur-[2px]"
             onClick={handleClick}
           >
             Get Started
           </Button>
         </div>
 
-        {/* 3D Canvas Background */}
+        {/* Background Image & Dark Overlay */}
         <div className="absolute inset-0 z-10">
-          <CanvasElem />
+          <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent z-10"></div>
+          <img
+            src={allPiece}
+            className="w-full h-full object-cover object-bottom"
+          />
         </div>
       </section>
 
