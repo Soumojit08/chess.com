@@ -97,14 +97,14 @@ const PiecesSec = () => {
                 <img src={piece.image} className="h-full w-full object-cover" />
               </div>
               <div className="flex flex-col justify-between w-3/5">
-                <h1 className="text-3xl md:text-4xl font-mono tracking-widest mb-2 md:mb-4 text-white">
+                <h1 className="text-3xl md:text-4xl font-mono tracking-widest text-white">
                   {piece.name}
                 </h1>
                 <p className="text-sm md:text-base text-platinum line-clamp-4 ">
                   {piece.description}
                 </p>
                 <div>
-                  <h2 className="text-lg md:text-xl font-mono tracking-widest mb-2 md:mb-4 mt-2 text-white">
+                  <h2 className="text-lg md:text-xl font-mono tracking-widest mb-2 md:mb-1 mt-1 text-white">
                     {piece.dimensions.title}
                   </h2>
                   <div className="flex gap-2">
