@@ -1,4 +1,4 @@
-import chessPiece from "../assets/chess pieces sec.jpg";
+import chessPiece from "../assets/pieces.jpg";
 
 const InformationSec = () => {
   return (
