@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import router from "./routes/routes.js";
-import connectDB from "./utils/db.js";
+import connectDB, { sql } from "./utils/db.js";
 import { Server } from "socket.io";
 import http from "http";
 import cors from "cors";
@@ -19,6 +19,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1", router);
 app.use(cors());
 app.use(cookieParser());
+
+app.get("/data", async (req, res) => {
+  try {
+    const data = await sql`SELECT * FROM users`;
+    res.json({ data: data });
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
  
 io.on("connection", (socket) => {
   console.log("A user connected: " + socket.id);
