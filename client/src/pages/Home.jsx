@@ -4,7 +4,7 @@ import PiecesSec from "../components/PiecesSec";
 import GallerySec from "../components/GallerySec";
 import ContactSec from "../components/ContactSec";
 import Footer from "../components/Footer";
-import allPiece from "../assets/home page.jpg";
+import allPiece from "../assets/home page.webp";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {

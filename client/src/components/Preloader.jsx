@@ -17,7 +17,7 @@ const Preloader = ({ onComplete }) => {
 
     tl.to(counterObj, {
       value: 100,
-      duration: 2.5, // Adjust duration for the "loading" feel
+      duration: 1, // Adjust duration for the "loading" feel
       ease: "power2.inOut",
       onUpdate: () => {
         setCount(Math.round(counterObj.value));

@@ -1,10 +1,10 @@
-import piece from "../assets/chess pieces sec.jpg";
-import king from "../assets/king.png";
-import queen from "../assets/queen.png";
-import bishop from "../assets/bishop.png";
-import knight from "../assets/kinght.png";
-import rook from "../assets/rook.png";
-import pawn from "../assets/pawn.png";
+import piece from "../assets/chess pieces sec.webp";
+import king from "../assets/king.webp";
+import queen from "../assets/queen.webp";
+import bishop from "../assets/bishop.webp";
+import knight from "../assets/kinght.webp";
+import rook from "../assets/rook.webp";
+import pawn from "../assets/pawn.webp";
 
 const pieces = [
   {
