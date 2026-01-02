@@ -1,8 +1,11 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { AiOutlineLogin } from "react-icons/ai";
+import { RiLogoutCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import Logo from "./ui/Logo";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { SignedIn, SignOutButton, SignedOut } from "@clerk/clerk-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +18,6 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Contact", path: "/contact" },
-    { name: "Profile", path: "/profile" },
   ];
 
   return (
@@ -88,6 +90,23 @@ const Navbar = () => {
           >
             <FaLinkedin size={28} />
           </Link>
+          <SignedIn>
+            <SignOutButton>
+              <button className=" hover:text-white transition-colors duration-300 cursor-pointer">
+                <RiLogoutCircleLine size={28} />
+              </button>
+            </SignOutButton>
+          </SignedIn>
+          <SignedOut>
+            <Link to="/login">
+              <button
+                onClick={toggleMenu}
+                className=" hover:text-white transition-colors duration-300 cursor-pointer"
+              >
+                <AiOutlineLogin size={28} />
+              </button>
+            </Link>
+          </SignedOut>
         </div>
       </div>
     </>
