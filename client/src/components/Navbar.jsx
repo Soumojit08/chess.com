@@ -70,21 +70,24 @@ const Navbar = () => {
 
         <div className="flex flex-col space-y-4 text-right uppercase text-silver">
           <Link
-            to="/instagram"
+            to="https://www.instagram.com/soumojit___08/"
+            target="_blank"
             onClick={toggleMenu}
             className=" hover:text-white transition-colors duration-300"
           >
             <FaInstagram size={28} />
           </Link>
           <Link
-            to="/github"
+            to="https://github.com/Soumojit08"
+            target="_blank"
             onClick={toggleMenu}
             className=" hover:text-white transition-colors duration-300"
           >
             <FaGithub size={28} />
           </Link>
           <Link
-            to="/linkedin"
+            to="https://www.linkedin.com/in/soumojit-banerjee"
+            target="_blank"
             onClick={toggleMenu}
             className=" hover:text-white transition-colors duration-300"
           >
