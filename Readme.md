@@ -8,7 +8,7 @@ A real-time online chess game inspired by **chess.com**, built with the **MERN s
 | :--- | :--- | :--- |
 | **Frontend** | React + Vite | Fast, modern UI framework |react-chessboard | socket.io-client | chess.js
 | **Styling** | **Tailwind CSS + Shadcn UI** | Industry-standard, accessible UI components |
-| **State** | **Zustand** + **TanStack Query** | Efficient global state & server-state management |
+| **State** | **Redux Toolkit** | Efficient global state & server-state management |
 | **Backend** | Node.js + Express | Scalable REST API & WebSocket handling |
 | **Realtime** | Socket.IO | Real-time bi-directional events (Moves, Chat) |
 | **Validation** | **Zod** | Type-safe schema validation (Frontend & Backend) |
