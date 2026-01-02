@@ -12,9 +12,9 @@ A real-time online chess game inspired by **chess.com**, built with the **MERN s
 | **Backend** | Node.js + Express | Scalable REST API & WebSocket handling |
 | **Realtime** | Socket.IO | Real-time bi-directional events (Moves, Chat) |
 | **Validation** | **Zod** | Type-safe schema validation (Frontend & Backend) |
-| **Database** | **PostgreSQL** + **Drizzle ORM** | Relational data integrity & modern TypeScript ORM |
+| **Database** | **PostgreSQL** + **Prisma** | Relational data integrity & modern TypeScript ORM |
 | **Caching** | **Redis** | Session management & game state caching |
-| **Auth** | **Clerk** (or Better Auth) | Secure, battle-tested user authentication |
+| **Auth** | **Clerk** | Secure, battle-tested user authentication |
 | **DevOps** | **Docker** + **Coolify** | Containerization & self-hosted PaaS deployment |
 | **Testing** | **Vitest** + **Playwright** | Unit & End-to-End testing |
 
@@ -27,11 +27,19 @@ chess-app/
 │
 ├── client/                 # React Frontend
 │   ├── src/
+│   │   ├── api/
+│   │   ├── assets/
 │   │   ├── components/     # Chessboard, Lobby, Login, etc.
-│   │   ├── services/       # API and socket setup
+│   │   ├── features/
+│   │   ├── lib/
+│   │   ├── pages/
+│   │   ├── store/
 │   │   ├── App.jsx
+│   │   ├── index.css
 │   │   └── main.jsx
 │   ├── package.json
+│   ├── components.json
+│   ├── jsconfig.json
 │   └── vite.config.js
 │
 ├── server/                 # Node + Express Backend
@@ -82,8 +90,7 @@ In `/server/.env` create:
 
 ```
 PORT=4000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/chess
-JWT_SECRET=your_secret_key
+DB_URI=postgresql://<username>:<password>@localhost:5432/chess
 CLIENT_URL=http://localhost:5173
 ```
 
@@ -116,14 +123,14 @@ Runs on: **[http://localhost:5173](http://localhost:5173)**
 * Real-time chess moves using Socket.IO
 * Move validation using `chess.js`
 * Game creation & joining
-* Basic MongoDB persistence for games
+* Basic PostgreSQL persistence for games
 * Clean UI chessboard with `react-chessboard`
 
 ---
 
-## 🔮 Coming Next
+## 🔮 Highlights
 
-* ✅ JWT user authentication
+* ✅ Clerk secure authentication
 * ✅ Lobby and matchmaking
 * ✅ ELO rating system
 * ✅ Game timers and resign/draw
@@ -139,8 +146,8 @@ Runs on: **[http://localhost:5173](http://localhost:5173)**
 | UI chessboard      | `react-chessboard`              |
 | Realtime           | `socket.io`, `socket.io-client` |
 | Backend framework  | `express`                       |
-| Database           | `mongoose`                      |
-| Auth               | `jsonwebtoken`, `bcrypt`        |
+| Database           | `postgresql`                    |
+| Auth               | `clerk`                         |
 | Frontend framework | `react`, `vite`                 |
 
 ---
@@ -155,12 +162,10 @@ Runs on: **[http://localhost:5173](http://localhost:5173)**
 
 ---
 
-## 🏁 Next Steps
-
-1. ✅ (Current) Project setup + README
-2. 🧩 Setup **Backend boilerplate (Express + Socket.IO + MongoDB)**
-3. ♟️ Setup **Frontend chessboard and socket connections**
-4. 🔐 Add **auth and matchmaking**
-5. ⚔️ Implement **ELO, timers, and lobby UI**
+## 📚 Credits
+This project is created and owned by Soumojit Banerjee make sure to credit me if you use this project for any commercial or non-commercial purpose and star this repository if you find it useful.
 
 ---
+
+## 📝 Open Sourced
+This project is open-sourced under the MIT License - see the [LICENSE](LICENSE) file for details.
