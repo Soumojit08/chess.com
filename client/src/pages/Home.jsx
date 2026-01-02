@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/user");
+    navigate("/login");
   };
   return (
     <div className="min-h-screen bg-obsidian text-white flex flex-col">
