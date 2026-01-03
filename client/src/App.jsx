@@ -10,7 +10,7 @@ import AuthSync from "./providers/AuthSync";
 
 const App = () => {
   return (
-    <div className="h-screen w-full bg-obsidian text-foreground relative">
+    <div className="h-screen w-full bg-background text-foreground relative">
       <AuthSync />
       <Navbar />
       <Routes>

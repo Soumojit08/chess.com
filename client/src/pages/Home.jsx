@@ -13,7 +13,7 @@ const Home = () => {
     navigate("/login");
   };
   return (
-    <div className="min-h-screen bg-obsidian text-white flex flex-col">
+    <div className="min-h-screen bg-background text-foreground flex flex-col">
       {/* HERO SECTION */}
       <section className="relative h-screen w-full overflow-hidden flex items-end justify-center pb-24 md:pb-32">
         {/* Content Overlay */}
@@ -41,7 +41,7 @@ const Home = () => {
       </section>
 
       {/* CONTENT SECTIONS */}
-      <div className="relative z-30 bg-obsidian">
+      <div className="relative z-30 bg-background">
         <InformationSec />
         <PiecesSec />
         <GallerySec />
