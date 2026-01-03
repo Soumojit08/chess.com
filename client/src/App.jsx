@@ -7,6 +7,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
+import { Toaster } from "react-hot-toast";
+import AuthSync from "./providers/AuthSync";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -14,6 +16,7 @@ const App = () => {
   return (
     <div className="h-screen w-full bg-obsidian text-foreground relative">
       {loading && <Preloader onComplete={() => setLoading(false)} />}
+      <AuthSync />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +25,7 @@ const App = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <Toaster />
     </div>
   );
 };
