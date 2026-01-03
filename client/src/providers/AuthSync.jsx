@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useDispatch } from "react-redux";
 import { setUser, clearUser, setAuthLoading } from "@/features/authSlice";
-import toast from "react-hot-toast";
 
 const AuthSync = () => {
   const { isSignedIn, user, isLoaded } = useUser();
@@ -22,10 +21,8 @@ const AuthSync = () => {
         })
       );
       console.log("User : " + user.fullName);
-      toast.success("Logged in successfully");
     } else {
       dispatch(clearUser());
-      toast.success("Logged out successfully");
       console.log("User is not signed in");
     }
 
