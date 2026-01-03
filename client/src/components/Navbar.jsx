@@ -95,13 +95,13 @@ const Navbar = () => {
           </Link>
           <SignedIn>
             <SignOutButton>
-              <button className=" hover:text-white transition-colors duration-300 cursor-pointer">
+              <button title="Logout" className=" hover:text-white transition-colors duration-300 cursor-pointer">
                 <RiLogoutCircleLine size={28} />
               </button>
             </SignOutButton>
           </SignedIn>
           <SignedOut>
-            <Link to="/login">
+            <Link to="/login" title="Login">
               <button
                 onClick={toggleMenu}
                 className=" hover:text-white transition-colors duration-300 cursor-pointer"
