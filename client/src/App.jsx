@@ -7,6 +7,7 @@ import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
 import { Toaster } from "react-hot-toast";
 import AuthSync from "./providers/AuthSync";
+import AuthGate from "./providers/AuthGate";
 
 const App = () => {
   return (
@@ -14,7 +15,14 @@ const App = () => {
       <AuthSync />
       <Navbar />
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard"
+          element={
+            <AuthGate>
+              <Dashboard />
+            </AuthGate>
+          }
+        />
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

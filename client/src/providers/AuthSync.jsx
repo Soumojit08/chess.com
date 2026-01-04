@@ -11,13 +11,16 @@ const AuthSync = () => {
     if (!isLoaded) return;
 
     if (isSignedIn) {
+      console.log(user);
       dispatch(
         setUser({
           clerkId: user.id,
           email: user.primaryEmailAddress?.emailAddress,
+          fullName: user.fullName,
           firstName: user.firstName,
           lastName: user.lastName,
           avatar: user.imageUrl,
+          createdAt: user.createdAt.toDateString(),
         })
       );
       console.log("Signed In");
