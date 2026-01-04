@@ -1,7 +1,24 @@
+
 const Dashboard = () => {
   return (
-    <div className="w-full h-screen bg-background text-foreground flex items-center justify-center">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
+    <div className="w-full h-screen bg-background text-foreground">
+      <div className="flex h-full justify-evenly">
+        <div className="w-1/3 flex flex-col">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className="w-1/3 flex flex-col">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div className="w-1/3 flex flex-col">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
     </div>
   );
 };
