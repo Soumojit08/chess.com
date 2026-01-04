@@ -2,13 +2,10 @@ import { useEffect } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useDispatch } from "react-redux";
 import { setUser, clearUser, setAuthLoading } from "@/features/authSlice";
-import { useNavigate, useLocation } from "react-router-dom";
 
 const AuthSync = () => {
   const { isSignedIn, user, isLoaded } = useUser();
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -23,21 +20,14 @@ const AuthSync = () => {
           avatar: user.imageUrl,
         })
       );
-
-      if (["/", "/login", "/register"].includes(location.pathname)) {
-        navigate("/dashboard");
-      }
+      console.log("Signed In");
     } else {
       dispatch(clearUser());
-      console.log("User is not signed in");
-
-      if (["/dashboard", "/profile"].includes(location.pathname)) {
-        navigate("/");
-      }
+      console.log("Not Signed In");
     }
 
     dispatch(setAuthLoading(false));
-  }, [isLoaded, isSignedIn, user, dispatch, navigate, location.pathname]);
+  }, [isLoaded, isSignedIn, user, dispatch]);
 
   return null;
 };

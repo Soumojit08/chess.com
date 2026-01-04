@@ -6,11 +6,18 @@ import ContactSec from "../components/ContactSec";
 import Footer from "../components/Footer";
 import allPiece from "../assets/home page.webp";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   const navigate = useNavigate();
+  const { isAuthenticated } = useSelector((state) => state.auth);
+
   const handleClick = () => {
-    navigate("/login");
+    if (isAuthenticated) {
+      navigate("/dashboard");
+    } else {
+      navigate("/login");
+    }
   };
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col">
@@ -26,7 +33,7 @@ const Home = () => {
             className="bg-transparent border border-white text-white hover:bg-white cursor-pointer hover:text-black transition-all duration-300 uppercase tracking-[0.15em] px-10 py-6 text-sm md:text-base rounded-none backdrop-blur-[2px]"
             onClick={handleClick}
           >
-            Get Started
+            {isAuthenticated ? "Go to Dashboard" : "Get Started"}
           </Button>
         </div>
 
