@@ -8,7 +8,7 @@ const Dashboard = () => {
     <div className="w-full h-screen bg-background text-foreground flex items-center justify-center px-20">
       <div className="flex w-full h-4/5 justify-evenly space-x-4">
         <div className="w-1/4 flex flex-col space-y-4">
-          <Card className="w-full h-1/3 rounded-none">
+          <Card className="w-full h-1/3 rounded-none flex items-center justify-center text-center">
             <CardHeader>
               <h1>Avtar</h1>
               <CardTitle>{user.fullName}</CardTitle>
