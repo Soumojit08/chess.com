@@ -26,7 +26,7 @@ const Avtar = () => {
       size: 96,
       flip: false,
       scale: 100,
-      radius: 10,
+      radius: 50,
       backgroundColor: [avtarColor],
       backgroundType: ["gradientLinear", "solid"],
     }).toDataUri();
