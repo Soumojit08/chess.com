@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { createAvatar } from "@dicebear/core";
-import { avataaarsNeutral } from "@dicebear/collection";
+import { notionistsNeutral } from "@dicebear/collection";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
@@ -21,7 +21,7 @@ const Avtar = () => {
   }, []);
 
   const avatar = useMemo(() => {
-    return createAvatar(avataaarsNeutral, {
+    return createAvatar(notionistsNeutral, {
       seed: userName,
       size: 96,
       flip: false,
