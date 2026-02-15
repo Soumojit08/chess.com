@@ -49,7 +49,12 @@ const Dashboard = () => {
             </Button>
           </div>
         </section>
-        <section className="border-red-700 border-2 w-[50%]"></section>
+        <section className="border-red-700 border-2 w-[50%] relative p-2">
+          <div className="w-[34%] h-full absolute left-0 top-0 border-red-700 border-2">
+            
+          </div>
+          <div className="w-[64%] h-full absolute right-0 top-0 border-red-700 border-2"></div>
+        </section>
       </div>
       <div className="w-full flex h-[35%] p-2 pt-1 gap-2">
         <section className="border-red-700 border-2 w-[25%]"></section>
