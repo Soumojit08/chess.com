@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useSelector } from "react-redux";
-import img from "../assets/home page.webp";
+import img from "../assets/chess_cutout.webp";
 
 const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
