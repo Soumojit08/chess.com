@@ -23,6 +23,7 @@
     "gsap": "^3.13.0",
     "lineicons-react": "^2.0.0",
     "lucide-react": "^0.548.0",
+    "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.6.0",
