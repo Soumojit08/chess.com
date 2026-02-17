@@ -15,6 +15,7 @@ const Dashboard = () => {
   return (
     <div className="h-screen w-full bg-background text-foreground flex flex-wrap font-sans pt-15">
       <div className="w-full flex h-[65%] p-2 pb-1 gap-2">
+        {/* name and image  */}
         <section className="w-[50%] relative flex flex-col items-center justify-start">
           <div className="absolute inset-0 z-0">
             <LightRays
@@ -49,11 +50,20 @@ const Dashboard = () => {
             </Button>
           </div>
         </section>
-        <section className="border-red-700 border-2 w-[50%] relative p-2">
-          <div className="w-[34%] h-full absolute left-0 top-0 border-red-700 border-2">
-            
+
+        {/* analysis area */}
+        <section className="border-red-700 border-2 w-[50%] flex gap-2 p-2">
+          {/* Left column - 3 equal rows */}
+          <div className="w-[35%] flex flex-col gap-2">
+            <div className="border-red-700 border-2 flex-1"></div>
+            <div className="border-red-700 border-2 flex-1"></div>
+            <div className="border-red-700 border-2 flex-1"></div>
           </div>
-          <div className="w-[64%] h-full absolute right-0 top-0 border-red-700 border-2"></div>
+          {/* Right column - 2 rows (top smaller, bottom larger) */}
+          <div className="w-[65%] flex flex-col gap-2">
+            <div className="border-red-700 border-2 h-[40%]"></div>
+            <div className="border-red-700 border-2 flex-1"></div>
+          </div>
         </section>
       </div>
       <div className="w-full flex h-[35%] p-2 pt-1 gap-2">
