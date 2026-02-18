@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Navbar (Visible always) */}
-      <nav className="fixed top-0 left-0 w-full z-40 px-6 py-4 flex justify-between items-center bg-transparent mix-blend-difference text-white">
+      <nav className="fixed top-0 left-0 w-full z-40 px-6 py-2 flex justify-between items-center bg-transparent mix-blend-difference text-white border-b border-zinc-800">
         <Logo />
 
         {/* Menu Trigger Button */}
@@ -95,7 +95,10 @@ const Navbar = () => {
           </Link>
           <SignedIn>
             <SignOutButton>
-              <button title="Logout" className=" hover:text-white transition-colors duration-300 cursor-pointer">
+              <button
+                title="Logout"
+                className=" hover:text-white transition-colors duration-300 cursor-pointer"
+              >
                 <RiLogoutCircleLine size={28} />
               </button>
             </SignOutButton>

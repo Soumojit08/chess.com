@@ -21,13 +21,15 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         customSmall:
           "bg-transparent border border-white text-white hover:bg-white cursor-pointer hover:text-black transition-all duration-300 uppercase tracking-[0.15em] text-sm rounded-none backdrop-blur-[2px]",
+        customCovered:
+          "bg-foreground border border-white text-black hover:bg-transparent cursor-pointer hover:text-white transition-all duration-300 uppercase tracking-[0.15em] text-sm rounded-none backdrop-blur-[2px]",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         icon: "h-9 w-9",
-        customSmall: "h-6 px-6 py-4",
+        customSmall: "px-8 py-4",
       },
     },
     defaultVariants: {
