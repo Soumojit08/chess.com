@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Navbar (Visible always) */}
-      <nav className="fixed top-0 left-0 w-full z-40 px-6 py-2 flex justify-between items-center bg-transparent mix-blend-difference text-white border-b border-zinc-800">
+      <nav className="fixed top-0 left-0 w-full z-40 px-6 py-2 flex justify-between items-center bg-transparent mix-blend-difference text-white">
         <Logo />
 
         {/* Menu Trigger Button */}

@@ -14,6 +14,15 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
 const chartConfig = {
   elo: {
@@ -31,12 +40,23 @@ const chartData = [
   { month: "June", elo: 1457 },
 ];
 
+const friends = [
+  { id: 1, name: "Magnus C.", avatar: "MC", elo: 2847, active: true },
+  { id: 2, name: "Hikaru N.", avatar: "HN", elo: 2794, active: false },
+  { id: 3, name: "Fabiano C.", avatar: "FC", elo: 2786, active: true },
+  { id: 4, name: "Ding Liren", avatar: "DL", elo: 2762, active: false },
+  { id: 5, name: "Ian N.", avatar: "IN", elo: 2758, active: true },
+  { id: 6, name: "Alireza F.", avatar: "AF", elo: 2751, active: false },
+  { id: 7, name: "Wesley So", avatar: "WS", elo: 2778, active: true },
+  { id: 8, name: "Levon A.", avatar: "LA", elo: 2745, active: false },
+];
+
 const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
 
   return (
     <div className="h-screen w-full bg-background text-foreground flex flex-wrap font-mono pt-15">
-      <div className="w-full flex h-[65%]  pb-1 gap-2">
+      <div className="w-full flex h-[65%]  pb-1 gap-2 border-t border-zinc-800/50">
         {/* name and image  */}
         <section className="w-[50%] relative flex flex-col items-center justify-start">
           <div className="absolute inset-0 z-0">
@@ -144,7 +164,64 @@ const Dashboard = () => {
                 </LineChart>
               </ChartContainer>
             </Card>
-            <Card className="flex-1"></Card>
+            <Card className="flex-1 flex flex-col overflow-hidden" id="table">
+              <CardHeader className="pb-1 pt-3 px-4">
+                <CardTitle className="text-sm">Friends</CardTitle>
+              </CardHeader>
+              <ScrollArea className="flex-1 px-2 pb-2">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="w-8"></TableHead>
+                      <TableHead>Name</TableHead>
+                      <TableHead className="text-center">ELO</TableHead>
+                      <TableHead className="text-right"></TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {friends.map((f) => (
+                      <TableRow key={f.id}>
+                        {/* Avatar */}
+                        <TableCell className="pr-0">
+                          <div className="w-7 h-7 rounded-full bg-zinc-700 flex items-center justify-center text-[10px] font-bold text-white">
+                            {f.avatar}
+                          </div>
+                        </TableCell>
+                        {/* Name + active dot */}
+                        <TableCell>
+                          <div className="flex items-center gap-1.5">
+                            {f.active && (
+                              <span className="w-2 h-2 rounded-full bg-green-500 inline-block shrink-0" />
+                            )}
+                            <span
+                              className={
+                                f.active ? "" : "text-muted-foreground"
+                              }
+                            >
+                              {f.name}
+                            </span>
+                          </div>
+                        </TableCell>
+                        {/* ELO */}
+                        <TableCell className="text-center text-xs text-muted-foreground">
+                          {f.elo}
+                        </TableCell>
+                        {/* Unfriend */}
+                        <TableCell className="text-right">
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            className="text-xs cursor-pointer bg-primary text-primary-foreground"
+                          >
+                            Unfriend
+                          </Button>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </ScrollArea>
+            </Card>
           </div>
         </section>
       </div>
