@@ -1,33 +1,30 @@
-import {React, useState} from "react"
-import { Calendar } from "@/components/ui/calendar"
-import { es } from "react-day-picker/locale"
-import { Card, CardContent } from "@/components/ui/card"
+import { React, useState } from "react";
+import { Calendar } from "@/components/ui/calendar";
 
 const CalendarBooked = () => {
-  const [date, setDate] = useState(new Date(new Date().getFullYear(), 1, 3) || "")
+  const [date, setDate] = useState(
+    new Date(new Date().getFullYear(), 1, 3) || "",
+  );
   const bookedDates = Array.from(
     { length: 15 },
-    (_, i) => new Date(new Date().getFullYear(), 1, 12 + i)
-  )
+    (_, i) => new Date(new Date().getFullYear(), 1, 12 + i),
+  );
   return (
-    <Card className="mx-auto w-fit p-0">
-      <CardContent className="p-0">
-        <Calendar
-          mode="single"
-          defaultMonth={date}
-          selected={date}
-          onSelect={setDate}
-          disabled={bookedDates}
-          modifiers={{
-            booked: bookedDates,
-          }}
-          modifiersClassNames={{
-            booked: "[&>button]:line-through opacity-100",
-          }}
-        />
-      </CardContent>
-    </Card>
-  )
-}
+    <Calendar
+      mode="single"
+      defaultMonth={date}
+      selected={date}
+      onSelect={setDate}
+      disabled={bookedDates}
+      className="p-1 [--cell-size:1.6rem] text-xs"
+      modifiers={{
+        booked: bookedDates,
+      }}
+      modifiersClassNames={{
+        booked: "[&>button]:line-through opacity-100",
+      }}
+    />
+  );
+};
 
 export default CalendarBooked;

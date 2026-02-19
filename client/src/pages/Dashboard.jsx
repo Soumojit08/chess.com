@@ -1,5 +1,6 @@
 import {
   Card,
+  CardContent,
   CardHeader,
   CardTitle,
   CardDescription,
@@ -245,22 +246,62 @@ const Dashboard = () => {
           </CardDescription>
         </Card>
 
-        <Card className="flex-2 flex flex-col items-start justify-start">
-          <CardHeader className="text-2xl">
-            <CardTitle>Activity Calendar</CardTitle>
+        <Card className="flex-1 flex flex-col overflow-hidden">
+          <CardHeader className="pb-0 pt-2 px-2 text-center">
+            <CardTitle className="text-sm">Calendar</CardTitle>
           </CardHeader>
-          <CardDescription>
+          <CardContent className="flex-1 flex items-center justify-center p-0">
             <CalenderBooked />
-          </CardDescription>
+          </CardContent>
         </Card>
 
-        <Card className="flex-1 flex flex-col items-center justify-center">
-          <CardHeader className="text-center text-2xl">
-            <CardTitle>Last Match</CardTitle>
+        <Card className="flex-2 flex flex-col">
+          <CardHeader className="pb-1 pt-3 px-4">
+            <CardTitle className="text-sm">Match History</CardTitle>
           </CardHeader>
-          <CardDescription>
-            <span className="capitalize text-xl">VS Magnus Carlsen</span>
-          </CardDescription>
+          <CardContent className="flex-1 px-3 pb-2 pt-0">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="py-2">Result</TableHead>
+                  <TableHead className="py-2">Opponent</TableHead>
+                  <TableHead className="py-2 text-right">Date</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {[
+                  {
+                    result: "Win",
+                    opponent: "Hikaru N.",
+                    date: "Today, 10:23 AM",
+                    color: "text-green-500",
+                  },
+                  {
+                    result: "Loss",
+                    opponent: "Fabiano C.",
+                    date: "Yesterday, 8:15 PM",
+                    color: "text-red-500",
+                  },
+                  {
+                    result: "Draw",
+                    opponent: "Ding Liren",
+                    date: "Feb 18, 2:30 PM",
+                    color: "text-yellow-500",
+                  },
+                ].map((match, i) => (
+                  <TableRow key={i}>
+                    <TableCell className={`py-2 font-medium ${match.color}`}>
+                      {match.result}
+                    </TableCell>
+                    <TableCell className="py-2">{match.opponent}</TableCell>
+                    <TableCell className="py-2 text-right text-muted-foreground text-xs">
+                      {match.date}
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </CardContent>
         </Card>
       </div>
     </div>
