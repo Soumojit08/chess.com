@@ -23,7 +23,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
+import CalenderBooked from "@/components/CalendarBooked";
 
 const chartConfig = {
   elo: {
@@ -56,7 +56,7 @@ const Dashboard = () => {
   const user = useSelector((state) => state.auth.user);
 
   return (
-    <div className="h-screen w-full bg-background text-foreground flex flex-wrap font-mono pt-15">
+    <div className="h-screen w-full bg-background text-foreground flex flex-wrap pt-15">
       <div className="w-full flex h-[65%]  pb-1 gap-2 border-t border-zinc-800/50">
         {/* name and image  */}
         <section className="w-[50%] relative flex flex-col items-center justify-start">
@@ -214,7 +214,7 @@ const Dashboard = () => {
                             size="sm"
                             className="text-xs cursor-pointer bg-primary text-primary-foreground"
                           >
-                            Unfriend
+                            Challange
                           </Button>
                         </TableCell>
                       </TableRow>
@@ -241,28 +241,25 @@ const Dashboard = () => {
             <CardTitle>Daily Streak</CardTitle>
           </CardHeader>
           <CardDescription>
-            <span className="capitalize text-3xl">10</span>
+            <span className="capitalize text-3xl">10 days</span>
           </CardDescription>
         </Card>
+
+        <Card className="flex-2 flex flex-col items-start justify-start">
+          <CardHeader className="text-2xl">
+            <CardTitle>Activity Calendar</CardTitle>
+          </CardHeader>
+          <CardDescription>
+            <CalenderBooked />
+          </CardDescription>
+        </Card>
+
         <Card className="flex-1 flex flex-col items-center justify-center">
           <CardHeader className="text-center text-2xl">
             <CardTitle>Last Match</CardTitle>
           </CardHeader>
           <CardDescription>
             <span className="capitalize text-xl">VS Magnus Carlsen</span>
-          </CardDescription>
-        </Card>
-        <Card className="flex-1 flex flex-col items-center justify-center">
-          <CardHeader className="text-center text-2xl">
-            <CardTitle>Share On</CardTitle>
-          </CardHeader>
-          <CardDescription>
-            <span className="capitalize text-2xl flex gap-3 cursor-pointer">
-              <FaInstagram />
-              <FaFacebook />
-              <FaTwitter />
-              <FaGithub />
-            </span>
           </CardDescription>
         </Card>
       </div>
