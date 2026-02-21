@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { AiOutlineLogin } from "react-icons/ai";
 import { RiLogoutCircleLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import Logo from "./ui/Logo";
+import Logo from "../ui/Logo";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { SignedIn, SignOutButton, SignedOut } from "@clerk/clerk-react";
 

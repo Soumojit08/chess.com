@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import InformationSec from "../components/InformationSec";
-import PiecesSec from "../components/PiecesSec";
-import GallerySec from "../components/GallerySec";
-import ContactSec from "../components/ContactSec";
-import Footer from "../components/Footer";
+import InformationSec from "../components/home/InformationSec";
+import PiecesSec from "../components/home/PiecesSec";
+import GallerySec from "../components/home/GallerySec";
+import ContactSec from "../components/home/ContactSec";
+import Footer from "../components/shared/Footer";
 import allPiece from "../assets/home page.webp";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";

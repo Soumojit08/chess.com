@@ -1,4 +1,4 @@
-import chessPiece from "../assets/pieces.webp";
+import chessPiece from "../../assets/pieces.webp";
 
 const InformationSec = () => {
   return (
