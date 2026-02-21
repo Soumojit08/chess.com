@@ -26,6 +26,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import CalenderBooked from "@/components/CalendarBooked";
 
+
 const chartConfig = {
   elo: {
     label: "ELO",
@@ -247,12 +248,7 @@ const Dashboard = () => {
         </Card>
 
         <Card className="flex-1 flex flex-col overflow-hidden">
-          <CardHeader className="pb-0 pt-2 px-2 text-center">
-            <CardTitle className="text-sm">Calendar</CardTitle>
-          </CardHeader>
-          <CardContent className="flex-1 flex items-center justify-center p-0">
-            <CalenderBooked />
-          </CardContent>
+          <CalenderBooked />
         </Card>
 
         <Card className="flex-2 flex flex-col">
