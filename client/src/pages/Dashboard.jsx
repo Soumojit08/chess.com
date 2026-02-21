@@ -253,7 +253,7 @@ const Dashboard = () => {
 
         <Card className="flex-2 flex flex-col">
           <CardHeader className="pb-1 pt-3 px-4">
-            <CardTitle className="text-sm">Match History</CardTitle>
+            <CardTitle className="text-base">Match History</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 px-3 pb-2 pt-0">
             <Table>

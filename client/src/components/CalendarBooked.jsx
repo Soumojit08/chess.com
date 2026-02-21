@@ -16,10 +16,10 @@ const CalendarBooked = () => {
     <div className="flex flex-col h-full w-full p-3 gap-2">
       {/* Header */}
       <div className="flex items-center justify-between">
-        <span className="text-base font-mono font-light tracking-wide text-primary uppercase">
+        <span className="text-base font-sans font-light tracking-wide text-primary capitalize">
           {monthName} {year}
         </span>
-        <span className="text-sm text-muted-foreground">
+        <span className="text-sm font-mono text-muted-foreground">
           {activeDays.size} / {daysInMonth} days
         </span>
       </div>
