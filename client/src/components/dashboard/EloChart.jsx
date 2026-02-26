@@ -24,10 +24,10 @@ const chartData = [
 
 const EloChart = () => {
   return (
-    <Card className="h-[40%] p-4" id="chart">
+    <Card className="w-full min-w-0 p-3 md:p-4" id="chart">
       <ChartContainer
         config={chartConfig}
-        className="aspect-auto h-full w-full"
+        className="h-52 w-full min-w-0 md:h-64 lg:h-56"
       >
         <LineChart
           accessibilityLayer

@@ -10,8 +10,8 @@ const StatsCards = () => {
   const user = useSelector((state) => state.auth.user);
 
   return (
-    <div className="w-[35%] flex flex-col gap-2">
-      <Card className="flex-1 flex flex-col items-center justify-center">
+    <div className="grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-1 lg:gap-2">
+      <Card className="flex min-h-28 flex-col items-center justify-center">
         <CardHeader className="text-center text-xl">
           <CardTitle>Welcome</CardTitle>
         </CardHeader>
@@ -20,7 +20,7 @@ const StatsCards = () => {
         </CardDescription>
       </Card>
 
-      <Card className="flex-1 flex flex-col items-center justify-center">
+      <Card className="flex min-h-28 flex-col items-center justify-center">
         <CardHeader className="text-center text-xl">
           <CardTitle>Games Played</CardTitle>
         </CardHeader>
@@ -29,7 +29,7 @@ const StatsCards = () => {
         </CardDescription>
       </Card>
 
-      <Card className="flex-1 flex flex-col items-center justify-center">
+      <Card className="flex min-h-28 flex-col items-center justify-center sm:col-span-2 md:col-span-1">
         <CardHeader className="text-center text-xl">
           <CardTitle>Games Won</CardTitle>
         </CardHeader>

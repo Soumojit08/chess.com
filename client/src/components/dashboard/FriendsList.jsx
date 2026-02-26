@@ -23,62 +23,56 @@ const friends = [
 
 const FriendsList = () => {
   return (
-    <Card className="flex-1 flex flex-col overflow-hidden" id="table">
+    <Card className="flex w-full min-w-0 flex-col overflow-hidden" id="table">
       <CardHeader className="pb-1 pt-3 px-4">
         <CardTitle className="text-sm">Friends</CardTitle>
       </CardHeader>
-      <ScrollArea className="flex-1 px-2 pb-2">
-        <Table>
-          <TableHeader>
-            <TableRow>
-              <TableHead className="w-8"></TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead className="text-center">ELO</TableHead>
-              <TableHead className="text-right"></TableHead>
-            </TableRow>
-          </TableHeader>
-          <TableBody>
-            {friends.map((f) => (
-              <TableRow key={f.id}>
-                {/* Avatar */}
-                <TableCell className="pr-0">
-                  <div className="w-7 h-7 rounded-full bg-zinc-700 flex items-center justify-center text-[10px] font-bold text-white">
-                    {f.avatar}
-                  </div>
-                </TableCell>
-                {/* Name + active dot */}
-                <TableCell>
-                  <div className="flex items-center gap-1.5">
-                    {f.active && (
-                      <span className="w-2 h-2 rounded-full bg-green-500 inline-block shrink-0" />
-                    )}
-                    <span
-                      className={
-                        f.active ? "" : "text-muted-foreground"
-                      }
-                    >
-                      {f.name}
-                    </span>
-                  </div>
-                </TableCell>
-                {/* ELO */}
-                <TableCell className="text-center text-xs text-muted-foreground">
-                  {f.elo}
-                </TableCell>
-                {/* Challenge */}
-                <TableCell className="text-right">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="text-xs cursor-pointer bg-primary text-primary-foreground"
-                  >
-                    Challange
-                  </Button>
-                </TableCell>
+      <ScrollArea className="h-64 w-full px-2 pb-2 md:h-72 lg:h-[14rem]">
+        <div className="w-full overflow-x-auto">
+          <Table className="min-w-[22rem]">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-8"></TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead className="text-center">ELO</TableHead>
+                <TableHead className="text-right"></TableHead>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
+            </TableHeader>
+            <TableBody>
+              {friends.map((f) => (
+                <TableRow key={f.id}>
+                  <TableCell className="pr-0">
+                    <div className="w-7 h-7 rounded-full bg-zinc-700 flex items-center justify-center text-[10px] font-bold text-white">
+                      {f.avatar}
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div className="flex items-center gap-1.5">
+                      {f.active && (
+                        <span className="w-2 h-2 rounded-full bg-green-500 inline-block shrink-0" />
+                      )}
+                      <span className={f.active ? "" : "text-muted-foreground"}>
+                        {f.name}
+                      </span>
+                    </div>
+                  </TableCell>
+                  <TableCell className="text-center text-xs text-muted-foreground">
+                    {f.elo}
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-xs cursor-pointer bg-primary text-primary-foreground"
+                    >
+                      Challange
+                    </Button>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </ScrollArea>
     </Card>
   );
