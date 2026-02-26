@@ -13,24 +13,28 @@ import MatchHistory from "@/components/dashboard/MatchHistory";
 
 const Dashboard = () => {
   return (
-    <div className="h-screen w-full bg-background text-foreground flex flex-wrap pt-15">
-      <div className="w-full flex h-[65%]  pb-1 gap-2 border-t border-zinc-800/50">
-        {/* name and image  */}
-        <HeroSection />
+    <div className="min-h-screen w-full bg-background text-foreground pt-15">
+      <div className="w-full border-t border-zinc-800/50 px-3 py-3 md:px-4 md:py-4 lg:h-[65%] lg:px-0 lg:py-0">
+        <div className="grid w-full grid-cols-1 gap-3 lg:h-full lg:grid-cols-2 lg:gap-2">
+          {/* name and image  */}
+          <HeroSection />
 
-        {/* analysis area */}
-        <section className="w-[50%] flex gap-2 p-4 pr-8 pb-1">
-          {/* Left column - 3 equal rows */}
-          <StatsCards />
-          {/* Right column - 2 rows (top smaller, bottom larger) */}
-          <div className="w-[65%] flex flex-col gap-2">
-            <EloChart />
-            <FriendsList />
-          </div>
-        </section>
+          {/* analysis area */}
+          <section className="min-w-0 w-full p-0 md:px-0 lg:p-4 lg:pr-8 lg:pb-1">
+            <div className="grid h-full w-full grid-cols-1 gap-3 md:grid-cols-2 lg:gap-2">
+              {/* Left column - 3 equal rows */}
+              <StatsCards />
+              {/* Right column - 2 rows (top smaller, bottom larger) */}
+              <div className="min-w-0 grid grid-cols-1 gap-3 lg:gap-2">
+                <EloChart />
+                <FriendsList />
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-      <div className="w-full flex h-[35%] p-8 pt-2 gap-4">
-        <Card className="flex-1 flex flex-col items-center justify-center">
+      <div className="grid w-full grid-cols-1 gap-3 px-3 pb-3 md:grid-cols-2 md:px-4 lg:h-[35%] lg:grid-cols-4 lg:gap-4 lg:p-8 lg:pt-2">
+        <Card className="w-full min-w-0 flex flex-col items-center justify-center">
           <CardHeader className="text-center text-2xl">
             <CardTitle>Win Percentage</CardTitle>
           </CardHeader>
@@ -39,7 +43,7 @@ const Dashboard = () => {
           </CardDescription>
         </Card>
 
-        <Card className="flex-1 flex flex-col items-center justify-center">
+        <Card className="w-full min-w-0 flex flex-col items-center justify-center">
           <CardHeader className="text-center text-2xl">
             <CardTitle>Daily Streak</CardTitle>
           </CardHeader>
@@ -48,7 +52,7 @@ const Dashboard = () => {
           </CardDescription>
         </Card>
 
-        <Card className="flex-1 flex flex-col overflow-hidden">
+        <Card className="w-full min-w-0 flex flex-col overflow-hidden">
           <ActivityGrid />
         </Card>
 
