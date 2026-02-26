@@ -1,10 +1,10 @@
-import piece from "../../assets/chess pieces sec.webp";
-import king from "../../assets/king.webp";
-import queen from "../../assets/queen.webp";
-import bishop from "../../assets/bishop.webp";
-import knight from "../../assets/kinght.webp";
-import rook from "../../assets/rook.webp";
-import pawn from "../../assets/pawn.webp";
+import piece from "../assets/chess pieces sec.webp";
+import king from "../assets/king.webp";
+import queen from "../assets/queen.webp";
+import bishop from "../assets/bishop.webp";
+import knight from "../assets/kinght.webp";
+import rook from "../assets/rook.webp";
+import pawn from "../assets/pawn.webp";
 
 const pieces = [
   {

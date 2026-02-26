@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const ActivityGrid = () => {
+const CalendarBooked = () => {
   const now = new Date();
   const year = now.getFullYear();
   const month = now.getMonth();
@@ -54,4 +54,4 @@ const ActivityGrid = () => {
   );
 };
 
-export default ActivityGrid;
+export default CalendarBooked;
