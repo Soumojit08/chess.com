@@ -5,7 +5,7 @@ const ActivityGrid = () => {
   const year = now.getFullYear();
   const month = now.getMonth();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const monthName = now.toLocaleString("default", { month: "long" });
+  const monthName = now.toLocaleString("default", { month: "short" });
 
   // Dummy active days — replace with real data later
   const [activeDays] = useState(new Set([1, 3, 5, 6, 10, 12, 14, 17, 19, 21]));
@@ -13,7 +13,7 @@ const ActivityGrid = () => {
   const today = now.getDate();
 
   return (
-    <div className="flex flex-col h-full w-full p-3 gap-2">
+    <div className="flex flex-col h-full w-full p-3 gap-0">
       {/* Header */}
       <div className="flex items-center justify-between">
         <span className="text-base font-sans font-light tracking-wide text-primary capitalize">
@@ -25,9 +25,9 @@ const ActivityGrid = () => {
       </div>
 
       {/* Grid */}
-      <div className="flex-1 flex items-center justify-center p-3">
+      <div className="flex-1 flex items-center justify-center">
         <div
-          className="grid w-full space-y-2"
+          className="grid w-full max-w-4/5 gap-1.5 p-3 place-items-center"
           style={{
             gridTemplateColumns: "repeat(7, 1fr)",
           }}
@@ -42,7 +42,7 @@ const ActivityGrid = () => {
                 key={day}
                 title={`${monthName} ${day}`}
                 className={`
-                  aspect-square rounded-sm transition-all duration-100 w-2/3
+                  aspect-square rounded-sm transition-all duration-100 w-full max-w-[30px]
                   ${isActive ? "bg-primary " : "bg-charcoal"}
                 `}
               />
