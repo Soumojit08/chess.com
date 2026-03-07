@@ -1,8 +1,16 @@
+import { useState } from "react";
 import LightRays from "@/components/shared/LightRays";
 import { Button } from "@/components/ui/button";
+import NewGameDialog from "./NewGameDialog";
 import img from "../../assets/chess_cutout.webp";
 
 const HeroSection = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNewGame = () => {
+    setIsOpen(true);
+  };
+
   return (
     <section className="w-[50%] relative flex flex-col items-center justify-start">
       <div className="absolute inset-0 z-0">
@@ -28,13 +36,21 @@ const HeroSection = () => {
       />
       <div className=" p-8 w-full flex items-center justify-around gap-3">
         <div className="text-3xl">ELO : 1457</div>
-        <Button variant="customCovered" size="customSmall">
+        <Button
+          variant="customCovered"
+          size="customSmall"
+          onClick={() => {
+            handleNewGame();
+          }}
+        >
           [ New Game ]
         </Button>
         <Button variant="customSmall" size="customSmall">
           [ Game History ]
         </Button>
       </div>
+
+      <NewGameDialog open={isOpen} onOpenChange={setIsOpen} />
     </section>
   );
 };
