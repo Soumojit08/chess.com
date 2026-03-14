@@ -8,16 +8,20 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Bot, Users } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const NewGameDialog = ({ open, onOpenChange }) => {
+
+  const navigate = useNavigate();
+
   const handleVsAi = () => {
     onOpenChange(false);
-    // TODO: start vs AI game
+    navigate("/AI-game");
   };
 
   const handleVsPvp = () => {
     onOpenChange(false);
-    // TODO: start vs PvP game
+    navigate("/PVP-game");
   };
 
   return (

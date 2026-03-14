@@ -8,6 +8,8 @@ import Profile from "./pages/Profile";
 import { Toaster } from "react-hot-toast";
 import AuthSync from "./providers/AuthSync";
 import AuthGate from "./providers/AuthGate";
+import AIgame from "./pages/AIgame";
+import PVPgame from "./pages/PVPgame";
 
 const App = () => {
   return (
@@ -27,6 +29,9 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/AI-game" element={<AIgame />} />
+        <Route path="/PVP-game" element={<PVPgame />} />
+        {/* <Route path="/game-history" element={<GameHistory />} /> */}
       </Routes>
       <Toaster />
     </div>
